@@ -1,0 +1,172 @@
+.schedule-container {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.header {
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.week-number-container {
+  width: 20%;
+  background-color: #d3d3d3;
+  padding: 10px;
+  align-items: left;
+  text-align: left;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.day-container {
+  width: 98%;
+  background-color: #d3d3d3;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.week-number {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.day-container p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.section {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.time-period {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.period-header {
+  background-color: #d3d3d3;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.task-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.task {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.details {
+  background-color: #5355bd;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 95%;
+  border-radius: 5px;
+  color: white;
+}
+.detail {
+  background-color: #5355bd;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 97%;
+  border-radius: 5px;
+  color: white;
+}
+
+input::placeholder, select {
+  color: white;
+  background-color: #5355bd;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+.details:focus {
+  outline: none;
+  border-color: #200dcc81;
+}
+
+.autocomplete-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%; /* Show the dropdown below the input field */
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 100%; /* Ensure it matches the width of the input */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.autocomplete-dropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.autocomplete-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+.autocomplete-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.submit-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #5355bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #4245a3;
+}

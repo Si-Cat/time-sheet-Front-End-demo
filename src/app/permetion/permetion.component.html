@@ -1,0 +1,18 @@
+<div class="schedule-container">
+  <div class="section">
+    <div class="time-period">
+      <div class="task-details">
+        <div class="task">Employee</div>
+        <div class="autocomplete-container">
+          <input type="text" class="details" [formControl]="employeeControl" (blur)="onBlur()" (focus)="onFocus()" placeholder="Enter employee name" (input)="showDropdown = true">
+          <ul *ngIf="showDropdown" class="autocomplete-dropdown">
+            <li *ngFor="let name of filteredNames" (click)="onNameSelected(name)">
+              {{ name }}
+            </li>
+          </ul>
+        </div>
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

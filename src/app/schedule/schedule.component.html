@@ -1,0 +1,66 @@
+<div class="schedule-container">
+  <div class="header">
+    <div class="week-number-container">
+      <div class="week-number">Week Number: {{ weekNumber }}</div>
+    </div>
+    <div class="day-container">
+      <p>Your schedule for today is {{ selectedDay }}</p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="time-period">
+      <div class="period-header">Time Period</div>
+      <div class="task-details">
+        <div class="task">Select Date</div>
+        <input type="date" class="details" [(ngModel)]="selectedDate" [min]="minDate" [max]="maxDate" (change)="updateSelectedDay()">
+        
+        <div class="task">Time Period</div>
+        <select class="detail" [(ngModel)]="timePeriod">
+          <option value="" disabled>Select Period</option>
+          <option value="H1">H1</option>
+          <option value="H2">H2</option>
+          <option value="H3">H3</option>
+          <option value="H4">H4</option>
+        </select>
+
+        <div class="task">Work</div>
+        <select class="detail" [(ngModel)]="work">
+          <option value="" disabled>Select Work</option>
+          <option value="Project JS">Project JS</option>
+          <option value="Avant VRND">Avant VRND</option>
+          <option value="Other Work">Other Work</option>
+        </select>
+        
+        <div class="task">Client</div>
+        <div class="autocomplete-container">
+          <input type="text" class="details" [(ngModel)]="client" (input)="onClientInput()" (blur)="onClientBlur()" (focus)="onClientFocus()" placeholder="Landor/Adactim">
+          <ul *ngIf="showClientDropdown" class="autocomplete-dropdown">
+            <li *ngFor="let client of filteredClients" (click)="onClientSelected(client)">
+              {{ client }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="task" *ngIf="checkWorkRequiresProject()">Project</div>
+        <div class="autocomplete-container" *ngIf="checkWorkRequiresProject()">
+          <input type="text" class="details" [(ngModel)]="project" (input)="onProjectInput()" (blur)="onProjectBlur()" (focus)="onProjectFocus()" placeholder="Additional information about Project JS">
+          <ul *ngIf="showProjectDropdown" class="autocomplete-dropdown">
+            <li *ngFor="let project of filteredProjects" (click)="onProjectSelected(project)">
+              {{ project }}
+            </li>
+          </ul>
+        </div>
+        
+        <div class="task">Hours</div>
+        <input type="text" class="details" [(ngModel)]="hours" placeholder="4h/2h">
+        
+        <div class="task">Description</div>
+        <textarea class="details" [(ngModel)]="description" placeholder="Project for XXX and YYY"></textarea>
+
+      </div>
+    </div>
+  </div>
+  <div class="submit-container">
+    <button class="submit-button" (click)="submitSchedule()">Submit</button>
+  </div>
+</div>

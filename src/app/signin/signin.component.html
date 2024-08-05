@@ -1,0 +1,28 @@
+<div class="tst">
+    <div class="logo-container"></div>
+    <div class="wrapp">
+      <form (ngSubmit)="onSubmit(signUpForm)" #signUpForm="ngForm">
+        <h1>Sign Up</h1>
+        <div class="input">
+          <input type="text" name="firstName" placeholder="First Name" ngModel required>
+        </div>
+        <div class="input">
+          <input type="text" name="lastName" placeholder="Last Name" ngModel required>
+        </div>
+        <div class="input">
+          <input type="email" name="email" placeholder="E-mail" ngModel required>
+        </div>
+        <div class="input">
+          <input type="password" name="password" placeholder="Password" ngModel required>
+        </div>
+        <div class="input">
+          <input type="password" name="verifyPassword" placeholder="Verify Password" ngModel required>
+        </div>
+        <button type="submit" class="btn">Sign up</button>
+        <div class="register">
+          <p>Don't have an account? <a routerLink="/LogIn">Log In</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  

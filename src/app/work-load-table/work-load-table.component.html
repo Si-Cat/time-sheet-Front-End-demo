@@ -1,0 +1,38 @@
+<div class="table-container">
+  <div class="remaining-time-container">
+    <div class="label">Remaining time for this week</div>
+    <div class="time">{{ remainingHours }} Hours</div>
+  </div>
+  
+  <div class="header">
+    <p>Table for this week's work load</p>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Hour Block</th>
+        <th>Work</th>
+        <th>Client</th>
+        <th>Project</th>
+        <th>Hours</th>
+        <th>Insite</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let dayGroup of groupedTableData">
+        <tr *ngFor="let row of dayGroup.entries; let i = index">
+          <td *ngIf="i === 0" [attr.rowspan]="dayGroup.entries.length">{{ row.day }}</td>
+          <td>{{ row.time }}</td>
+          <td>{{ row.work }}</td>
+          <td>{{ row.client }}</td>
+          <td>{{ row.project }}</td>
+          <td>{{ row.hours }}</td>
+          <td>{{ row.insite }}</td>
+          <td>{{ row.description }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

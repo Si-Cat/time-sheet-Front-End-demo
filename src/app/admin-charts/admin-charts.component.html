@@ -1,0 +1,41 @@
+<div class="schedule-container">
+  <div class="section">
+    <div class="time-period">
+      <div class="task-details">
+        <div class="task">Time periode</div>
+        <select class="details" [(ngModel)]="timea">
+          <option value="" disabled>Select time</option>
+              <option value="This week">This week</option>
+              <option value="Last month">Last month</option>
+              <option value="Last year">Last year</option>
+              <option value="all time">All time</option>
+        </select>
+        <select class="details" [(ngModel)]="timeb">
+          <option value="" disabled>Select time</option>
+              <option value="This week">This week</option>
+              <option value="Last month">Last month</option>
+              <option value="Last year">Last year</option>
+              <option value="all time">All time</option>
+        </select>
+      </div>
+      <div class="task-details">
+        <div class="task">Chart type</div>
+            <select class="details" [(ngModel)]="charttype">
+              <option value="" disabled>Select type</option>
+              <option value="Culom">Culom</option>
+              <option value="Other Work">In Work</option>
+            </select>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="time-period">
+      <div class="task-details">
+        <div class="task">Workers names</div>
+        <input type="text" class="details" [(ngModel)]="employera" placeholder="employer A">
+        <input type="text" class="details" [(ngModel)]="employerb" placeholder="employer B">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [chart]="columnChart"></div>

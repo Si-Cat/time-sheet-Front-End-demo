@@ -1,0 +1,30 @@
+<app-navbar [inputData]="parentData"></app-navbar>
+
+<div class="schedule-container">
+  <div class="section">
+    <div class="time-period">
+      <div class="task-details">
+        <div class="task">Full Name</div>
+        <div class="autocomplete-container">
+          <input type="text" class="details" [formControl]="fullNameControl" (blur)="onBlur()" (focus)="onFocus()" placeholder="Enter full name" (input)="showDropdown = true">
+          <ul *ngIf="showDropdown" class="autocomplete-dropdown">
+            <li *ngFor="let name of filteredNames" (click)="onFullNameSelected(name)">
+              {{ name }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="time-period">
+      <div class="task-details">
+        <div class="task">The week</div>
+        <input type="number" class="details" [(ngModel)]="week" (ngModelChange)="updateStartOfWeekDate()" placeholder="Enter the week number">
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-work-load-table [userEmail]="userEmail" [firstDayOfWeek]="startOfWeekDate"></app-work-load-table>
+<app-charts [userEmail]="userEmail"></app-charts>
+
+<app-permetion></app-permetion>

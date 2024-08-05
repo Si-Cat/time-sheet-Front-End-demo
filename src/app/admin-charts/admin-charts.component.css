@@ -1,0 +1,72 @@
+.schedule-container {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  
+  .section {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+  }
+  
+  .time-period {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+  }
+  
+  .task-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .task {
+    background-color: #e0e0e0;
+    padding: 5px;
+    border-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  .details {
+    background-color: #5355bd;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    flex: 1;
+  }
+  
+  input::placeholder {
+    color: white;
+  }
+  
+  textarea::placeholder {
+    color: white;
+  }
+  
+  .details:focus {
+    outline: none;
+    border-color: #200dcc81;
+  }
+  
+  .divider {
+    width: 5px;
+    background-color: rgb(24, 5, 133);
+    height: 65%;
+    margin: 10px 10px;
+  }
+   
+
+
+  

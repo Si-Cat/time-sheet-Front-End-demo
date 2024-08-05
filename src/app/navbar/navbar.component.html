@@ -1,0 +1,10 @@
+<div class="navbar">
+    <div class="brand"></div>
+    <div id="navbar-links">
+      <a href="Shedule" [class.active]="isActiveHome" (click)="handleLinkClick('Home')">Home</a>
+      <a href="Stats" [class.active]="isActiveStat" (click)="handleLinkClick('Stats')">Stats</a>
+      <a *ngIf="isAdmin" href="Admin" [class.active]="isActiveAdmin" (click)="handleLinkClick('Admin')">Admin</a>
+      <a href="" (click)="handleLinkClick('LogOut')">Log Out</a>
+    </div>
+  </div>
+  

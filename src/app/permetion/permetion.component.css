@@ -1,0 +1,115 @@
+.schedule-container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.section {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.time-period {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.task {
+  background-color: #e0e0e0;
+  padding: 5px;
+  border-radius: 5px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.details {
+  background-color: #5355bd;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 95%;
+  border-radius: 5px;
+  color: white;
+  flex: 1;
+}
+
+input::placeholder {
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
+.details:focus {
+  outline: none;
+  border-color: #200dcc81;
+}
+
+.submit-button {
+  background-color: #5355bd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #4245a3;
+}
+
+.autocomplete-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  bottom: 100%; /* Position the dropdown above the input field */
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1000;
+  width: 100%; /* Ensure it matches the width of the input */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.autocomplete-dropdown li {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.autocomplete-dropdown li:hover {
+  background-color: #f1f1f1;
+}
+
+.autocomplete-dropdown li:last-child {
+  border-bottom: none;
+}

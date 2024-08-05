@@ -1,0 +1,35 @@
+
+  <div class="schedule-container">
+    <div class="section">
+        <div class="time-period">
+          <div class="task-details">
+            <div class="task">Time Periode</div>
+            <select class="details" (change)="setTime($event.target)">
+                <option value="This week">This week</option>
+                <option value="Last week">Last week</option>
+                <option value="This month">This month</option>
+                <option value="Last month">Last month</option>
+                <option value="This year">This year</option>
+                <option value="Last year">Last year</option>
+            </select>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="time-period">
+          <div class="task-details">
+            <div class="task">Chart type</div>
+            <select class="details" >
+              <option value="" disabled>Select type</option>
+              <option value="Pie">Pie</option>
+              <option value="Other Work">In Work</option>
+            </select>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  
+<div class="pie" [chart]="pieChart"></div>
+
+
+
